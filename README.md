@@ -1,8 +1,8 @@
 # GraphQL Server with Authentication Prisma 2 and Nexus Schema
 
-![Build Status](https://github.com/ryands17/nexus-auth/workflows/CI/badge.svg)
-
 This example shows how to implement a **GraphQL server with an email-password-based auth**, based on [Prisma](https://www.prisma.io/), [apollo-server](https://www.apollographql.com/server/), [graphql-shield](https://github.com/maticzav/graphql-shield) & [Nexus Schema](https://www.nexusjs.org/#/components/schema/about) via the [Nexus Prisma](https://www.nexusjs.org/#/components/schema/plugins/prisma) plugin.
+
+This setup uses introspection instead of Prisma Migrate as that is currently experimental. I have used [node-pg-migrate](https://github.com/salsita/node-pg-migrate) to create migrations.
 
 ## How to use
 
@@ -21,7 +21,6 @@ This uses a simple [SQLite database](https://www.sqlite.org/index.html).
 To set up your database, run:
 
 ```sh
-yarn db:save
 yarn db:migrate
 ```
 
