@@ -1,0 +1,41 @@
+generator prisma {
+  provider        = "prisma-client-js"
+  previewFeatures = ["connectOrCreate", "transactionApi"]
+  binaryTargets   = ["native", "linux-musl"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+model pgmigrations {
+  id     Int      @id @default(autoincrement())
+  name   String
+  run_on DateTime
+}
+
+model Post {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String?   @unique
+  published Boolean?  @default(false)
+  user_id   Int?
+  createdAt DateTime? @default(now()) @map("created_at")
+  updatedAt DateTime? @default(now()) @map("updated_at")
+  author    User?     @relation(fields: [user_id], references: [id])
+
+  @@map("post")
+}
+
+model User {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  password  String
+  createdAt DateTime? @default(now()) @map("created_at")
+  updatedAt DateTime? @default(now()) @map("updated_at")
+  posts     Post[]
+
+  @@map("user")
+}
