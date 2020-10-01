@@ -15,7 +15,7 @@ jobs:
         image: postgis/postgis:12-2.5-alpine
         env:
           POSTGRES_PASSWORD: password
-          POSTGRES_DB: postgres
+          POSTGRES_DB: prisma2
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
