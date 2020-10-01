@@ -9,6 +9,7 @@ datasource db {
   url      = env("DB_URL")
 }
 
+// ignore this model
 model pgmigrations {
   id     Int      @id @default(autoincrement())
   name   String

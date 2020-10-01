@@ -34,18 +34,21 @@ export const rules = {
   ),
 }
 
-export const permissions = shield({
-  Query: {
-    me: rules.isAuthenticatedUser,
-    posts: rules.isAuthenticatedUser,
-    post: rules.isAuthenticatedUser,
+export const permissions = shield(
+  {
+    Query: {
+      me: rules.isAuthenticatedUser,
+      posts: rules.isAuthenticatedUser,
+      post: rules.isAuthenticatedUser,
+    },
+    Mutation: {
+      createDraft: rules.isAuthenticatedUser,
+      deletePost: rules.isPostOwner,
+      publish: rules.isPostOwner,
+    },
+    Subscription: {
+      latestPost: rules.isAuthenticatedUser,
+    },
   },
-  Mutation: {
-    createDraft: rules.isAuthenticatedUser,
-    deletePost: rules.isPostOwner,
-    publish: rules.isPostOwner,
-  },
-  Subscription: {
-    latestPost: rules.isAuthenticatedUser,
-  },
-})
+  { allowExternalErrors: true }
+)

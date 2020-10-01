@@ -1,39 +1,42 @@
-const path = require('path')
-const fs = require('fs')
 const util = require('util')
 const NodeEnvironment = require('jest-environment-node')
-const { nanoid } = require('nanoid')
 const exec = util.promisify(require('child_process').exec)
-
-const prismaBinary = path.join(
-  __dirname,
-  '..',
-  'node_modules',
-  '.bin',
-  'prisma'
-)
+const { PrismaClient } = require('@prisma/client')
+const {
+  uniqueNamesGenerator,
+  adjectives,
+  colors,
+  names,
+} = require('unique-names-generator')
 
 class PrismaTestEnvironment extends NodeEnvironment {
   constructor(config) {
     super(config)
 
-    // Generate a unique sqlite identifier for this test context
-    this.dbName = `test_${nanoid()}.db`
-    process.env.DB_URL = `file:${this.dbName}`
-    this.global.process.env.DB_URL = `file:${this.dbName}`
-    this.dbPath = path.join(__dirname, this.dbName)
-    fs.closeSync(fs.openSync(this.dbPath, 'w'))
+    // Generate a unique schema for this test context
+    this.schema = uniqueNamesGenerator({
+      dictionaries: [adjectives, names, colors],
+    }).toLowerCase()
+    this.client = new PrismaClient()
+    process.env.DB_URL = `postgresql://postgres:password@localhost:5432/prisma2?schema=${this.schema}`
+    this.global.process.env.DB_URL = `postgresql://postgres:password@localhost:5432/prisma2?schema=${this.schema}`
   }
 
   async setup() {
     // Run the migrations to ensure our schema has the required structure
-    await exec(`${prismaBinary} migrate up --experimental`)
+    await this.client.$executeRaw(
+      `create schema if not exists "${this.schema}"`
+    )
+    await exec(`yarn db:migrate --schema ${this.schema}`)
 
     return super.setup()
   }
 
   async teardown() {
-    await fs.promises.unlink(this.dbPath)
+    await this.client.$executeRaw(
+      `drop schema if exists "${this.schema}" cascade`
+    )
+    await this.client.$disconnect()
   }
 }
 
