@@ -10,6 +10,21 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    services:
+      postgres:
+        image: postgis/postgis:12-2.5-alpine
+        env:
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - '5432:5432'
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -20,7 +35,7 @@ jobs:
           node-version: 12.x
 
       - name: Use cached node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: nodeModules-${{ hashFiles('**/yarn.lock') }}
@@ -31,7 +46,7 @@ jobs:
         run: yarn install --frozen-lockfile && yarn prebuild
 
       - name: Lint and Test
-        run: yarn lint & yarn test --maxWorkers=2
+        run: yarn lint & yarn test
         env:
           APP_SECRET: 'app_secret'
 
