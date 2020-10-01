@@ -23,12 +23,7 @@ class PrismaTestEnvironment extends NodeEnvironment {
   }
 
   async setup() {
-    // Run the migrations to ensure our schema has the required structure
-    await this.client.$executeRaw(
-      `create schema if not exists "${this.schema}"`
-    )
     await exec(`yarn db:migrate --schema ${this.schema}`)
-
     return super.setup()
   }
 

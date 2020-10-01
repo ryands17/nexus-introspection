@@ -1,5 +1,6 @@
 {
   "schema": "public",
+  "create-schema": true,
   "database-url-var": "DB_URL",
   "migrations-dir": "prisma/migrations",
   "tsconfig": "./tsconfig.json"

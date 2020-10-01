@@ -1,7 +1,7 @@
 import { shield, rule } from 'graphql-shield'
 import { Context } from '../types'
 import { handleError } from './helpers'
-import { errors } from './constants'
+import { errors, isDev } from './constants'
 
 export const rules = {
   isAuthenticatedUser: rule({ cache: 'contextual' })(
@@ -50,5 +50,5 @@ export const permissions = shield(
       latestPost: rules.isAuthenticatedUser,
     },
   },
-  { allowExternalErrors: true }
+  { allowExternalErrors: isDev() }
 )
