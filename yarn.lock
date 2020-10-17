@@ -4797,10 +4797,10 @@ node-notifier@^8.0.0:
     uuid "^8.3.0"
     which "^2.0.2"
 
-node-pg-migrate@5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/node-pg-migrate/-/node-pg-migrate-5.8.0.tgz#6a637a10a24d527106030f51d1c101d7cc782e0c"
-  integrity sha512-WPEl/YPxtGmO0HUvDyTEvbIAuKS6nQC5p2Gl/6akA8q5TzeaCecLF1XU2p9WyXrK5l8YJE6CbMoOVURwLqbdrA==
+node-pg-migrate@5.8.1:
+  version "5.8.1"
+  resolved "https://registry.yarnpkg.com/node-pg-migrate/-/node-pg-migrate-5.8.1.tgz#0741ca12b5109a408c96bf951f2aee99031af6e8"
+  integrity sha512-/FH7jq56PjcYQsLdrrxCHMDSCISxU2hDfm5fPgkNN8v8gLXBzL9jkw8PsMwOTE2husQm+vQdwiTvEzliXUAClw==
   dependencies:
     "@types/pg" "^7.4.0"
     decamelize "^4.0.0"
