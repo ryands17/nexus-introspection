@@ -3160,10 +3160,10 @@ graphql-request@3.3.0:
     extract-files "^9.0.0"
     form-data "^3.0.0"
 
-graphql-shield@7.3.8:
-  version "7.3.8"
-  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.3.8.tgz#5ca8dc18a6ca6515d78c74e87f55c277c11b20fd"
-  integrity sha512-4KGgm1z4ZfVlwPFW5tcHl9Cm9LZopOW/AsdYe5LfE3wJdruvIlVyN979PgkP7VSWID0CYvuhWgPWGXOwzFu8iw==
+graphql-shield@7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/graphql-shield/-/graphql-shield-7.4.0.tgz#8f8f819c35e9729cc705a7d86ab8d752bf522f31"
+  integrity sha512-FV1gdzIZhUwalXBFB3ipAVnxqnHnW0oKlCo4+voyT0OqKcsOGeUsYuBloxW3+x3oa9DIIu503qk26SL2Xd3wcg==
   dependencies:
     "@types/yup" "0.29.9"
     object-hash "^2.0.3"
