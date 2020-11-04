@@ -3,6 +3,6 @@
 yarn dev &
 pid=$!
 
-sleep 15
+sleep 10
 
 kill "$pid"

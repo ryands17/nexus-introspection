@@ -52,3 +52,6 @@ jobs:
         run: yarn lint & yarn test
         env:
           APP_SECRET: 'app_secret'
+
+      - name: Build
+        run: yarn build
