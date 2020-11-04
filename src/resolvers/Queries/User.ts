@@ -1,6 +1,6 @@
 import { queryField } from '@nexus/schema'
 
-export const me = queryField('me', {
+const me = queryField('me', {
   type: 'User',
   async resolve(_parent, _args, ctx) {
     const user = await ctx.prisma.user.findOne({
@@ -11,3 +11,5 @@ export const me = queryField('me', {
     return user
   },
 })
+
+export default { me }

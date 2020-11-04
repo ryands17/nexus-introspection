@@ -1,6 +1,6 @@
 import { objectType } from '@nexus/schema'
 
-export const Post = objectType({
+const Post = objectType({
   name: 'Post',
   definition(t) {
     t.model.id()
@@ -11,23 +11,27 @@ export const Post = objectType({
   },
 })
 
-export const User = objectType({
+const User = objectType({
   name: 'User',
   definition(t) {
     t.model.createdAt()
     t.model.id()
     t.model.name()
     t.model.email()
-    t.model.posts({
-      pagination: true,
-    })
+    t.model.posts({ pagination: true })
   },
 })
 
-export const AuthPayload = objectType({
+const AuthPayload = objectType({
   name: 'AuthPayload',
   definition(t) {
     t.string('accessToken')
     t.field('user', { type: 'User' })
   },
 })
+
+export default {
+  User,
+  Post,
+  AuthPayload,
+}

@@ -1,4 +1,5 @@
-import { server } from '../src/server'
+import { ApolloServer } from 'apollo-server'
+import { createServer } from '../src/server'
 import { prisma } from '../src/utils/helpers'
 import { Headers } from 'cross-fetch'
 
@@ -9,8 +10,10 @@ type Config = { url: string }
 
 export const getConfig = () => {
   let config: any = {}
+  let server: ApolloServer
 
   beforeAll(async (done) => {
+    server = await createServer()
     const { url } = await server.listen({ port: 0 })
     config.url = url
     done()
