@@ -1,6 +1,6 @@
 import { intArg, extendType } from '@nexus/schema'
 
-export const post = extendType({
+const postMutation = extendType({
   type: 'Mutation',
   definition(t) {
     t.crud.createOnePost({
@@ -36,3 +36,5 @@ export const post = extendType({
     })
   },
 })
+
+export default { postMutation }
