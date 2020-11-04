@@ -45,10 +45,10 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn prebuild
 
+      - name: Build
+        run: yarn build
+
       - name: Lint and Test
         run: yarn lint & yarn test
         env:
           APP_SECRET: 'app_secret'
-
-      - name: Build
-        run: yarn build
