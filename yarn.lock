@@ -540,10 +540,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@nexus/schema@0.16.0":
-  version "0.16.0"
-  resolved "https://registry.yarnpkg.com/@nexus/schema/-/schema-0.16.0.tgz#cbf2b70eb47a854e4bcec849583368d7e7048087"
-  integrity sha512-H+JJDycjcilvsRtLySpwfVXp1gYiOqPPLQdq04R4Vp5S400PpdADQlKMV4EvpBJ/BCxwQ8XwP8+nrOKvDZLLUw==
+"@nexus/schema@0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@nexus/schema/-/schema-0.17.0.tgz#5b6ec9630a9cd17f64a7ffc999378fa9835df3a9"
+  integrity sha512-X/DdvXGDNw2VMi1F2un7JRY17yFbuxXHM+U4ViejAf9jCkhlasdljK3TLTqA5wSFfriFIx0eWtYHkUeOvIjLkg==
   dependencies:
     iterall "^1.2.2"
     tslib "^1.9.3"
@@ -569,17 +569,35 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@prisma/cli@2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.8.1.tgz#fdfeb56857f2fb08ec9769537279745749effcf7"
-  integrity sha512-mEGJplClGnXI5ki4R0Xq8nq62zcyu7Wzdhybege+cFPZFUbFj0petaPZl/tqta9o5neDyvpU/lDgOwef6mwySg==
+"@prisma/bar@^0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@prisma/bar/-/bar-0.0.0.tgz#9daff159a1a09abf7665a8b6e40ddc1fdc1ed4f7"
+  integrity sha512-3nez9n/vMyAr4+nmqj6Xh3cGZbreYHr3RWX0vgtrFRpiN6otuCzL+9HW8MW/DfZNuFz5YyIdfwnRSPueUZPoWQ==
 
-"@prisma/client@2.8.1":
-  version "2.8.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.8.1.tgz#6fe87968eed42901cf76c623985222ebc318c292"
-  integrity sha512-apt6ioi2euOZA1O9mPA8AMRjPoPECsva76gMCcHCVgHvhkMNpFkcbn+UTkErJYrTgcRR7CPQt4D+fw8pkAHfjA==
+"@prisma/cli@2.10.2":
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/cli/-/cli-2.10.2.tgz#74191358fac59c82193adced84b94a2cabe1d420"
+  integrity sha512-fpWwJNA5VO66d4RZpbvY6bXV5bisYCIa/Ae0TWPxXCKPyErbHQa0+vznq0M6v++VpfQC0v32E3k+2GIv18JlCQ==
   dependencies:
-    pkg-up "^3.1.0"
+    "@prisma/bar" "^0.0.0"
+    "@prisma/engines" "2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111"
+
+"@prisma/client@2.10.2":
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-2.10.2.tgz#2f37f3ea9aefa24cd80f1ff2e196250a5ec7ba75"
+  integrity sha512-55YKXgm5IQP/roKZCTn8ySFjgNwMSS/x3kOcUuDzpDtHXGpSXUkpeH6eqwnj6iq17DLxYqqw8gDGb4+WnIlohw==
+  dependencies:
+    "@prisma/engines-version" "2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111"
+
+"@prisma/engines-version@2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111":
+  version "2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111.tgz#7f96aa61085fc803f81b3df0fa32297909ce4b08"
+  integrity sha512-OuOSTvEzXJwCJzNqZ9N/+J3lO64HgX9uGiVOuvlTrRSXoLZk0Q2IiLAx8qhY1U7jPpHJ7LTlZuGNScimqonpJg==
+
+"@prisma/engines@2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111":
+  version "2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-2.10.1-6-7d0087eadc7265e12d4b8d8c3516b02c4c965111.tgz#614e82316270333d31a1581e533ef0c275b2b5f6"
+  integrity sha512-F/I8mmYMQnEFX47jl7Su8Pmvpua1wti9Uq3IUlSCqLQsrOmuMj+GKQ5nYEewmcynqBlyVcpUyxF5iAWbmUVdjw==
 
 "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
   version "1.1.2"
@@ -2886,13 +2904,6 @@ find-up@^1.0.0:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
 
-find-up@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/find-up/-/find-up-3.0.0.tgz#49169f1d7993430646da61ecc5ae355c21c97b73"
-  integrity sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
-  dependencies:
-    locate-path "^3.0.0"
-
 find-up@^4.0.0, find-up@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-4.1.0.tgz#97afe7d6cdc0bc5928584b7c8d7b16e8a9aa5d19"
@@ -2982,10 +2993,10 @@ fs-capacitor@^2.0.4:
   resolved "https://registry.yarnpkg.com/fs-capacitor/-/fs-capacitor-2.0.4.tgz#5a22e72d40ae5078b4fe64fe4d08c0d3fc88ad3c"
   integrity sha512-8S4f4WsCryNw2mJJchi46YgB6CR5Ze+4L1h8ewl9tEpL4SJ3ZO+c/bS4BWhB8bK+O3TMqhuZarTitd0S0eh2pA==
 
-fs-jetpack@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/fs-jetpack/-/fs-jetpack-3.2.0.tgz#4b7f375718cfe36594c9a1b5158b753c9c66122d"
-  integrity sha512-LMUQxf85b3y/IuQZM9gz7bPMH60Y+NpulmHdhv8nHvgu6daYd7DiSZJSgiHKk1h6vfv1VCOqpdJcR+ThO7sFVA==
+fs-jetpack@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/fs-jetpack/-/fs-jetpack-4.0.1.tgz#1731d70bba1bd29f5979d94f2d1e0498fe4d7f85"
+  integrity sha512-GkDbdjAy0Qye+TGrZ12g5gxmGWg0qFz1Ujwx4pEV0Rh8hh92kZ9Nsf3Ql+wshcycq2yfnzbe68AI0pjxP8Pj0Q==
   dependencies:
     minimatch "^3.0.2"
     rimraf "^2.6.3"
@@ -4404,14 +4415,6 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
-locate-path@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
-  integrity sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==
-  dependencies:
-    p-locate "^3.0.0"
-    path-exists "^3.0.0"
-
 locate-path@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-5.0.0.tgz#1afba396afd676a6d42504d0a67a3a7eb9f62aa0"
@@ -4757,16 +4760,17 @@ negotiator@0.6.2:
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
   integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
 
-nexus-plugin-prisma@0.22.0:
-  version "0.22.0"
-  resolved "https://registry.yarnpkg.com/nexus-plugin-prisma/-/nexus-plugin-prisma-0.22.0.tgz#7f06253eec868bf54c7f4fb6a832861e2e69210f"
-  integrity sha512-PSAjATeaaGta4mypSPff2dA4mk8Ux59CKzN58aF4pgVhgGTaZIalvVnmGNyDOHUYfp/G5lZ/kSNjJOfJoHZ2mg==
+nexus-plugin-prisma@0.23.1:
+  version "0.23.1"
+  resolved "https://registry.yarnpkg.com/nexus-plugin-prisma/-/nexus-plugin-prisma-0.23.1.tgz#90f39905b8589ab92eff340daaedf7cb60a321c1"
+  integrity sha512-cSH7BBUtxneLhD6BuGoOAG8uwjOExUfBnqA2LnJlkKP9BX4wG59Oe3LaJZfeiYqs0wex7yMeaN+9/uXIdKEJrA==
   dependencies:
     camelcase "^6.0.0"
-    fs-jetpack "^3.0.0"
+    fs-jetpack "^4.0.0"
     lodash "^4.17.20"
     outdent "^0.7.1"
     pluralize "^8.0.0"
+    semver "^7.3.2"
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -5108,19 +5112,12 @@ p-finally@^1.0.0:
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
   integrity sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
 
-p-limit@^2.0.0, p-limit@^2.2.0:
+p-limit@^2.2.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.3.0.tgz#3dd33c647a214fdfffd835933eb086da0dc21db1"
   integrity sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==
   dependencies:
     p-try "^2.0.0"
-
-p-locate@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-3.0.0.tgz#322d69a05c0264b25997d9f40cd8a891ab0064a4"
-  integrity sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==
-  dependencies:
-    p-limit "^2.0.0"
 
 p-locate@^4.1.0:
   version "4.1.0"
@@ -5207,11 +5204,6 @@ path-exists@^2.0.0:
   integrity sha1-D+tsZPD8UY2adU3V77YscCJ2H0s=
   dependencies:
     pinkie-promise "^2.0.0"
-
-path-exists@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
-  integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
 
 path-exists@^4.0.0:
   version "4.0.0"
@@ -5365,13 +5357,6 @@ pkg-dir@^4.2.0:
   integrity sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==
   dependencies:
     find-up "^4.0.0"
-
-pkg-up@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-3.1.0.tgz#100ec235cc150e4fd42519412596a28512a0def5"
-  integrity sha512-nDywThFk1i4BQK4twPQ6TA4RT8bDY96yeuCVBWL3ePARCiEKDRSrNGbFIgUJpLp+XeIR65v8ra7WuJOFUBtkMA==
-  dependencies:
-    find-up "^3.0.0"
 
 please-upgrade-node@^3.2.0:
   version "3.2.0"

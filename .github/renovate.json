@@ -3,11 +3,10 @@
   "masterIssue": true,
   "automerge": true,
   "schedule": ["every weekend"],
-  "ignoreDeps": ["@prisma/client", "@prisma/cli"],
   "packageRules": [
     {
-      "packagePatterns": [".*nexus"],
-      "groupName": "nexus"
+      "packagePatterns": [".*nexus", "@prisma/*"],
+      "groupName": "prisma-nexus"
     },
     {
       "packagePatterns": ["^@types/", "typesync"],
