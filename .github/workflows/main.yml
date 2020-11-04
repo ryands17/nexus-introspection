@@ -45,8 +45,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile && yarn prebuild
 
-      - name: Build
-        run: yarn build
+      - name: Dev
+        run: ./dev.sh
 
       - name: Lint and Test
         run: yarn lint & yarn test
