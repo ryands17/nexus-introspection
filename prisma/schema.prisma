@@ -1,6 +1,6 @@
 generator prisma {
   provider        = "prisma-client-js"
-  previewFeatures = ["connectOrCreate", "transactionApi"]
+  previewFeatures = ["nativeTypes", "uncheckedScalarInputs"]
   binaryTargets   = ["native", "linux-musl"]
 }
 
