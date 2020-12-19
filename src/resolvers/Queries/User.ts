@@ -1,4 +1,4 @@
-import { queryField } from '@nexus/schema'
+import { queryField } from 'nexus'
 
 const me = queryField('me', {
   type: 'User',

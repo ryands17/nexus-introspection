@@ -1,4 +1,4 @@
-import { extendType } from '@nexus/schema'
+import { extendType } from 'nexus'
 
 const postQuery = extendType({
   type: 'Query',

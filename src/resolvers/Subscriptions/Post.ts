@@ -1,4 +1,4 @@
-import { subscriptionField } from '@nexus/schema'
+import { subscriptionField } from 'nexus'
 import { Prisma } from '@prisma/client'
 
 const latestPost = subscriptionField('latestPost', {

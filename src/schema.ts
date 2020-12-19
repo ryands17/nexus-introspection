@@ -2,7 +2,7 @@ import path from 'path'
 import util from 'util'
 import globSync from 'glob'
 import { nexusSchemaPrisma } from 'nexus-plugin-prisma/schema'
-import { makeSchema } from '@nexus/schema'
+import { makeSchema } from 'nexus'
 import { join } from 'path'
 import { Context } from './types'
 
@@ -23,19 +23,20 @@ export const createSchema = async () => {
       typegen: join(__dirname, 'generated', 'index.d.ts'),
       schema: join(__dirname, 'generated', 'schema.graphql'),
     },
-    typegenAutoConfig: {
-      sources: [
+    contextType: {
+      module: join(__dirname, 'types.ts'),
+      export: 'Context',
+      alias: 'ctx',
+    },
+    sourceTypes: {
+      modules: [
         {
-          source: '@prisma/client',
+          module: require.resolve('.prisma/client/index.d.ts'),
           alias: 'prisma',
         },
-        {
-          source: join(__dirname, 'types.ts'),
-          alias: 'ctx',
-        },
       ],
-      contextType: 'ctx.Context',
     },
+    prettierConfig: join(process.cwd(), 'package.json'),
   })
 }
 

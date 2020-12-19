@@ -17,14 +17,5 @@ export const createServer = async () => {
     introspection: true,
     debug: isDev(),
     cors: true,
-    // subscriptions: {
-    //   onConnect: (_connectionParams, _websocket, connContext): SocketContext => {
-    //     return {
-    //       req: connContext.request,
-    //       prisma,
-    //       pubsub,
-    //     }
-    //   },
-    // },
   })
 }
