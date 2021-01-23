@@ -17,7 +17,7 @@
     "prisma": "dotenv -- prisma"
   },
   "dependencies": {
-    "@prisma/client": "2.14.0",
+    "@prisma/client": "2.15.0",
     "apollo-server": "2.19.2",
     "bcrypt": "5.0.0",
     "dotenv": "8.2.0",
@@ -28,7 +28,7 @@
     "nexus-plugin-prisma": "0.28.0"
   },
   "devDependencies": {
-    "@prisma/cli": "2.14.0",
+    "@prisma/cli": "2.15.0",
     "@types/bcrypt": "3.0.0",
     "@types/dotenv": "8.2.0",
     "@types/eslint": "7.2.6",
