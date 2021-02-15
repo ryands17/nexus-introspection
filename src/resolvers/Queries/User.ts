@@ -1,6 +1,6 @@
 import { queryField } from 'nexus'
 
-const me = queryField('me', {
+export const me = queryField('me', {
   type: 'User',
   async resolve(_parent, _args, ctx) {
     const user = await ctx.prisma.user.findUnique({
@@ -11,5 +11,3 @@ const me = queryField('me', {
     return user
   },
 })
-
-export default { me }

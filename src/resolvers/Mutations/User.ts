@@ -3,7 +3,7 @@ import { compare, hash } from 'bcrypt'
 import { generateAccessToken, handleError } from '../../utils/helpers'
 import { errors } from '../../utils/constants'
 
-const userMutation = extendType({
+export const userMutation = extendType({
   type: 'Mutation',
   definition(t) {
     t.field('signup', {
@@ -67,5 +67,3 @@ const userMutation = extendType({
     })
   },
 })
-
-export default { userMutation }

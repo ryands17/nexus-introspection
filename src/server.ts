@@ -8,9 +8,9 @@ import { createSchema } from './schema'
 import { isDev } from './utils/constants'
 import { createContext } from './utils/helpers'
 
-export const createServer = async () => {
+export const createServer = () => {
   return new ApolloServer({
-    schema: applyMiddleware(await createSchema(), permissions),
+    schema: applyMiddleware(createSchema(), permissions),
     context: createContext,
     playground: true,
     tracing: isDev(),
