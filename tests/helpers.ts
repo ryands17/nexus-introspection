@@ -13,7 +13,7 @@ export const getConfig = () => {
   let server: ApolloServer
 
   beforeAll(async (done) => {
-    server = await createServer()
+    server = createServer()
     const { url } = await server.listen({ port: 0 })
     config.url = url
     done()
