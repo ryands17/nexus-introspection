@@ -17,7 +17,7 @@
     "prisma": "dotenv -- prisma"
   },
   "dependencies": {
-    "@prisma/client": "2.19.0",
+    "@prisma/client": "2.20.1",
     "apollo-server": "2.22.1",
     "bcrypt": "5.0.1",
     "dotenv": "8.2.0",
