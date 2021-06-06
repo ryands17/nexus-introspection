@@ -12,17 +12,16 @@ export const getConfig = () => {
   let config: any = {}
   let server: ApolloServer
 
-  beforeAll(async (done) => {
+  beforeAll(async () => {
     server = createServer()
     const { url } = await server.listen({ port: 0 })
     config.url = url
-    done()
+    return config
   })
 
-  afterAll(async (done) => {
+  afterAll(async () => {
     await server.stop()
-    await prisma.$disconnect()
-    done()
+    return prisma.$disconnect()
   })
 
   return config as Config

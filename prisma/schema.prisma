@@ -1,6 +1,5 @@
 generator prisma {
   provider        = "prisma-client-js"
-  previewFeatures = ["nativeTypes"]
   binaryTargets   = ["native", "linux-musl"]
 }
 
