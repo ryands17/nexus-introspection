@@ -41,7 +41,7 @@
     "cross-env": "7.0.3",
     "dotenv-cli": "4.1.1",
     "eslint": "8.10.0",
-    "graphql-request": "4.0.0",
+    "graphql-request": "4.1.0",
     "jest": "27.5.1",
     "jest-environment-node": "27.5.1",
     "node-pg-migrate": "6.2.1",
