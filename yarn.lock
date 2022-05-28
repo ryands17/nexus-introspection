@@ -1487,10 +1487,10 @@
     pg-protocol "*"
     pg-types "^2.2.0"
 
-"@types/prettier@2.6.1":
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.6.1.tgz#76e72d8a775eef7ce649c63c8acae1a0824bbaed"
-  integrity sha512-XFjFHmaLVifrAKaZ+EKghFHtHSUonyw8P2Qmy2/+osBnrKbH9UYtlK10zg8/kCt47MFilll/DEDKy3DHfJ0URw==
+"@types/prettier@2.6.2":
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.6.2.tgz#b6df4f04f5dab9befe2cb74ed1461a0231e23cb7"
+  integrity sha512-dOW37mq8TBPPI8YIkmN/EDJFWBgvjEmQP8OmODSl26B4fud0sa3ohpTSi5AuhwSfkaY4kYBptSilmS6cBO0DVw==
 
 "@types/prettier@^2.1.5":
   version "2.2.3"
